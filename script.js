@@ -20,10 +20,17 @@ function mostrartarefa() {
 }
 
 function addtarefa() {
-    arraydetarefa.push({
-        tarefa: input.value,
-        status: false
-    })
+
+    if(input.value){
+        arraydetarefa.push({
+            tarefa: input.value,
+            status: false
+        })
+    }
+    else{
+        alert("Digite uma tarefa")
+    }
+    input.value = ""
     mostrartarefa()
 }
 
@@ -40,14 +47,20 @@ function concluir(index) {
 function recuperartarefa() {
     let minhatarefa = localStorage.getItem("Lista")
     if(minhatarefa){
-    arraydetarefa = JSON.parse(minhatarefa)
-    mostrartarefa()
+        arraydetarefa = JSON.parse(minhatarefa)
+        mostrartarefa()
+    }
+}
+
+function addenter(teclas){
+    if(teclas.key == "Enter"){
+        addtarefa()
     }
 }
 
 botao.addEventListener("click", addtarefa)
 
-
+document.addEventListener("keypress",addenter)
 
 
 
