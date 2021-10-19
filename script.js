@@ -39,8 +39,10 @@ function concluir(index) {
 
 function recuperartarefa() {
     let minhatarefa = localStorage.getItem("Lista")
+    if(minhatarefa){
     arraydetarefa = JSON.parse(minhatarefa)
     mostrartarefa()
+    }
 }
 
 botao.addEventListener("click", addtarefa)
