@@ -36,7 +36,7 @@ h1 {
     width: 20px;
 }
 
-.botao-delete,.botao-tick {
+.botao-delete,.botao-tick, .botao-arrasta, .botao-editar, .botao-down, .botao-up{
     border: none;
     background-color: transparent;
     position: absolute;
@@ -57,7 +57,23 @@ h1 {
     top: 0;
 }
 
-#botaoadd {
+.botao-down{
+    right: 50px;
+    top: 0;
+}
+
+.botao-up{
+    right: 85px;
+    top: 0;
+}
+
+.botao-editar{
+    right: 100px;
+    top: 0;
+    width: 350px;
+}
+
+#botaoadd{
     background-color: #8052ec;
     border-radius: 5px;
     height: 40px;
@@ -69,11 +85,34 @@ h1 {
     cursor: pointer;
     float: right;
 }
+
  #botaoadd:hover {
      opacity: 0.8;
  }
 
  #botaoadd:active {
+     opacity: 0.6;
+ }
+
+ #limpar{
+    background-color: #8052ec;
+    border-radius: 5px;
+    height: 40px;
+    width: 150px;
+    border: none;
+    padding: 0 10px;
+    color: #ffffff;
+    font-size: 17px;
+    cursor: pointer;
+    float: right;
+    margin-top: -13px;
+}
+
+ #limpar:hover {
+     opacity: 0.8;
+ }
+
+ #limpar:active {
      opacity: 0.6;
  }
 
@@ -97,6 +136,18 @@ h1 {
 }
 
 .listas:hover .botao-delete{
+    opacity: 100%;
+}
+
+.listas:hover .botao-up{
+    opacity: 100%;
+}
+
+.listas:hover .botao-down{
+    opacity: 100%;
+}
+
+.listas:hover .botao-editar{
     opacity: 100%;
 }
 
