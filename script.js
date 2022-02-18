@@ -49,9 +49,12 @@ function concluir(index) {
 }
 
 function editar(index){
+    let valor = arraydetarefa[index].tarefa
     let entrada = prompt("Editar", arraydetarefa[index].tarefa)
-    arraydetarefa[index].tarefa = entrada
-
+    if(!entrada)
+        arraydetarefa[index].tarefa = valor
+    else
+        arraydetarefa[index].tarefa =entrada
     mostrartarefa()
 }
 
